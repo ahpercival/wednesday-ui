@@ -29647,8 +29647,8 @@ var HeaderView = function HeaderView() {
   return /*#__PURE__*/_react.default.createElement("header", {
     className: "flex items-center flex-col"
   }, /*#__PURE__*/_react.default.createElement("h1", {
-    className: "text-4xl"
-  }, "Wedneday Club"), /*#__PURE__*/_react.default.createElement("h2", null, "Just another WordPress site"));
+    className: "text-2xl font-normal uppercase"
+  }, "Wedneday Club API"), /*#__PURE__*/_react.default.createElement("h2", null, "Just another WordPress site"));
 };
 
 var _default = HeaderView;
@@ -29827,7 +29827,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51395" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49356" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
