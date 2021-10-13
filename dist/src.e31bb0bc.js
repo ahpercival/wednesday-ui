@@ -29566,7 +29566,81 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"components/app/app.view.jsx":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"routes/home/home.view.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("components");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var HomeView = function HomeView() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    "data-name": "home"
+  }, /*#__PURE__*/_react.default.createElement(_components.Header, null), /*#__PURE__*/_react.default.createElement("main", null, "this is our home page"));
+};
+
+var _default = HomeView;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","components":"components/index.js"}],"routes/home/home.container.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _home = _interopRequireDefault(require("./home.view"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Home = function Home() {
+  return /*#__PURE__*/_react.default.createElement(_home.default, null);
+};
+
+var _default = Home;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./home.view":"routes/home/home.view.jsx"}],"routes/home/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function () {
+    return _home.default;
+  }
+});
+
+var _home = _interopRequireDefault(require("./home.container"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./home.container":"routes/home/home.container.js"}],"routes/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Home", {
+  enumerable: true,
+  get: function () {
+    return _home.default;
+  }
+});
+
+var _home = _interopRequireDefault(require("./home"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./home":"routes/home/index.js"}],"components/app/app.view.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29576,7 +29650,7 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _components = require("components");
+var _routes = require("routes");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -29584,15 +29658,13 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 
 var AppView = function AppView(_ref) {
   var message = _ref.message;
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "my-10"
-  }, /*#__PURE__*/_react.default.createElement(_components.Header, null));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_routes.Home, null));
 };
 
 var _default = (0, _react.memo)(AppView);
 
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","components":"components/index.js"}],"components/app/app.container.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","routes":"routes/index.js"}],"components/app/app.container.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29645,7 +29717,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var HeaderView = function HeaderView() {
   return /*#__PURE__*/_react.default.createElement("header", {
-    className: "flex items-center flex-col"
+    className: "flex items-center flex-col py-10"
   }, /*#__PURE__*/_react.default.createElement("h1", {
     className: "text-2xl font-normal uppercase"
   }, "Wedneday Club API"), /*#__PURE__*/_react.default.createElement("h2", null, "Just another WordPress site"));
@@ -29827,7 +29899,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49356" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61070" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

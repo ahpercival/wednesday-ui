@@ -1,10 +1,10 @@
 import React, { memo } from 'react'
-import { Header } from 'components'
+import { Home } from 'routes'
 
 const AppView = ({ message }) => (
-    <div className="my-10">
-        <Header />
-    </div>
+  <div>
+    <Home />
+  </div>
 )
 
 export default memo(AppView)
